@@ -12,7 +12,6 @@
     <!--second-->
     <bean class="com.spring.springcore.Student" name="student2"> 
     	<property name="studentId" value="5656" />
-    	
     	<property name="studentName" value="john" />
     	<property name="studentAddress" value="mumbai" />
     </bean>
