@@ -36,23 +36,32 @@ public class Emp {
 	public void setCourses(Map<String, String> courses) {
 		this.courses = courses;
 	}
+	public Properties getProps() {
+		return props;
+	}
+	public void setProps(Properties props) {
+		this.props = props;
+	}
 	
-	public Emp(String name, List<String> phones, Set<String> addresses, Map<String, String> courses) {
+	public Emp(String name, List<String> phones, Set<String> addresses, Map<String, String> courses, Properties props) {
 		super();
 		this.name = name;
 		this.phones = phones;
 		this.addresses = addresses;
 		this.courses = courses;
+		this.props = props;
 	}
 	
 	public Emp() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
 	@Override
 	public String toString() {
-		return "Emp [name=" + name + ", phones=" + phones + ", addresses=" + addresses + ", courses=" + courses + "]";
+		return "Emp [name=" + name + ", phones=" + phones + ", addresses=" + addresses + ", courses=" + courses
+				+ ", props=" + props + "]";
 	}
 	
-	
+		
 }
