@@ -7,13 +7,18 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
-    <bean class="com.spring.springcore.Student" name="student1" p:studentId="2564" p:studentName="aayush" p:studentAddress="thane" /> 
-    
-    <!--second-->
-    <bean class="com.spring.springcore.Student" name="student2"> 
-    	<property name="studentId" value="5656" />
-    	<property name="studentName" value="john" />
-    	<property name="studentAddress" value="mumbai" />
-    </bean>
+	<context:annotation-config></context:annotation-config>
+
+    <bean class="com.spring.springcore.auto.wire.annotation.Address" name="address1">
+		<property name="street" value="one street" />
+		<property name="city" value="Mumbai" />
+	</bean>
+	
+	<bean class="com.spring.springcore.auto.wire.annotation.Address" name="address2">
+		<property name="street" value="two street" />
+		<property name="city" value="Thane" />
+	</bean>
+	
+	<bean class="com.spring.springcore.auto.wire.annotation.Emp" name="emp1"/>
     
  </beans>

@@ -6,14 +6,21 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd 
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- <context:annotation-config />-->
     
-    <bean class="com.spring.springcore.Student" name="student1" p:studentId="2564" p:studentName="aayush" p:studentAddress="thane" /> 
-    
-    <!--second-->
-    <bean class="com.spring.springcore.Student" name="student2"> 
-    	<property name="studentId" value="5656" />
-    	<property name="studentName" value="john" />
-    	<property name="studentAddress" value="mumbai" />
-    </bean>
+    <bean class="com.spring.springcore.lifecycle.Samosa" name="samosa" init-method="init" destroy-method="destroy">
+		<property name="price" value="10"/>
+	</bean>
+	
+	<bean class="com.spring.springcore.lifecycle.Pepsi" name="pepsi" >
+		<property name="price" value="50"/>
+	</bean>
+	
+	<bean class="com.spring.springcore.lifecycle.Example" name="example" >
+		<property name="subject" value="maths"/>
+	</bean>
+	
+	<bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />
     
  </beans>

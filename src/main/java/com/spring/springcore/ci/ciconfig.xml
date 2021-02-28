@@ -6,7 +6,7 @@
 	xmlns:util="http://www.springframework.org/schema/util"
     xsi:schemaLocation="http://www.springframework.org/schema/beans 
     http://www.springframework.org/schema/beans/spring-beans.xsd 
-    http://www.springframework.org/schema/context/ 
+    http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd
 	http://www.springframework.org/schema/util
     http://www.springframework.org/schema/util/spring-util-2.5.xsd">
@@ -33,4 +33,9 @@
 	
 	<bean class="com.spring.springcore.ci.Person" name="person" c:name="john" c:personId="548" c:certi-ref="certi"/>
     
+	<bean class="com.spring.springcore.ci.Addition" name="addition">
+		<constructor-arg value="12" type="int" index="1"/>
+		<constructor-arg value="34" type="int" index="0"/>
+	</bean>
+
  </beans>
